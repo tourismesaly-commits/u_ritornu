@@ -1,0 +1,11 @@
+{
+  "title": "www.uritornu.com",
+  "description": "This web application offers a seamless booking experience for travelers seeking unique bed and breakfast accommodations, enhancing their travel planning.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
