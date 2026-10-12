@@ -279,7 +279,7 @@ function RoomCarousel({
         decoding="async"
         key={roomGallery[current]}
         loading="lazy"
-        src="{roomGallery[current]}"
+        src="{roomGallery[0]}"
       />
       <div className="room-carousel-nav">
         <button
