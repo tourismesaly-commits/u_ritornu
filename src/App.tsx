@@ -1,16 +1,9 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { NavLink } from "react-router"
 import poolHero from "./imports/optimized/pool.webp"
-// import residenceFrontHero from "./imports/optimized/residence-front.webp"
 import residenceBalconyHero from "./imports/optimized/residence-balcony.webp"
 import residenceCourtyard from "./imports/optimized/residence-courtyard.webp"
-// import residenceFacadePortrait from "./imports/optimized/residence-facade-portrait.webp"
-// import uritorneArtwork from "./imports/optimized/uritorne-transparent.webp"
-// import blueBedroomKitchen from "./imports/optimized/rooms/blue-bedroom-kitchen.webp"
-// import blueSuiteBalcony from "./imports/optimized/rooms/blue-suite-balcony.webp"
-// import blueSuiteDining from "./imports/optimized/rooms/blue-suite-dining.webp"
-// import greyBedroomBathroom from "./imports/optimized/rooms/grey-bedroom-bathroom.webp"
-// import redBedroomKitchen from "./imports/optimized/rooms/red-bedroom-kitchen.webp"
+
  
 const WHATSAPP =
   "https://wa.me/221774980186?text=Bonjour%20U%20Ritornu%2C%20je%20souhaite%20r%C3%A9server%20une%20chambre."
@@ -286,7 +279,7 @@ function RoomCarousel({
         decoding="async"
         key={roomGallery[current]}
         loading="lazy"
-        src="https://res.cloudinary.com/r13aojto/image/upload/v1791764295/ChatGPT_Image_Sep_26__2026__10_23_12_PM.png"
+        src="{roomGallery[current]}"
       />
       <div className="room-carousel-nav">
         <button
