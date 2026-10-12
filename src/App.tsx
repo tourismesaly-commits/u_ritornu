@@ -1,17 +1,17 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { NavLink } from "react-router"
 import poolHero from "./imports/optimized/pool.webp"
-import residenceFrontHero from "./imports/optimized/residence-front.webp"
+// import residenceFrontHero from "./imports/optimized/residence-front.webp"
 import residenceBalconyHero from "./imports/optimized/residence-balcony.webp"
 import residenceCourtyard from "./imports/optimized/residence-courtyard.webp"
-import residenceFacadePortrait from "./imports/optimized/residence-facade-portrait.webp"
-import uritorneArtwork from "./imports/optimized/uritorne-transparent.webp"
-import blueBedroomKitchen from "./imports/optimized/rooms/blue-bedroom-kitchen.webp"
-import blueSuiteBalcony from "./imports/optimized/rooms/blue-suite-balcony.webp"
-import blueSuiteDining from "./imports/optimized/rooms/blue-suite-dining.webp"
-import greyBedroomBathroom from "./imports/optimized/rooms/grey-bedroom-bathroom.webp"
-import redBedroomKitchen from "./imports/optimized/rooms/red-bedroom-kitchen.webp"
-
+// import residenceFacadePortrait from "./imports/optimized/residence-facade-portrait.webp"
+// import uritorneArtwork from "./imports/optimized/uritorne-transparent.webp"
+// import blueBedroomKitchen from "./imports/optimized/rooms/blue-bedroom-kitchen.webp"
+// import blueSuiteBalcony from "./imports/optimized/rooms/blue-suite-balcony.webp"
+// import blueSuiteDining from "./imports/optimized/rooms/blue-suite-dining.webp"
+// import greyBedroomBathroom from "./imports/optimized/rooms/grey-bedroom-bathroom.webp"
+// import redBedroomKitchen from "./imports/optimized/rooms/red-bedroom-kitchen.webp"
+ 
 const WHATSAPP =
   "https://wa.me/221774980186?text=Bonjour%20U%20Ritornu%2C%20je%20souhaite%20r%C3%A9server%20une%20chambre."
 
@@ -23,53 +23,53 @@ const images = {
 
 const heroSlides = [
   {
-    src: residenceFrontHero,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764327/residence-facade-portrait.png",
     alt: "Vue lumineuse de la résidence U Ritornu",
   },
   {
-    src: poolHero,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764295/ChatGPT_Image_Sep_26__2026__10_23_12_PM.png",
     alt: "Piscine de la résidence U Ritornu",
   },
   {
-    src: residenceBalconyHero,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764337/IMG_8456.JPG.jpg",
     alt: "Balcons et jardin de la résidence U Ritornu",
   },
   {
-    src: residenceFacadePortrait,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764327/residence-facade-portrait.png",
     alt: "Façade et jardin de la résidence U Ritornu",
   },
   {
-    src: residenceCourtyard,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764325/residence-courtyard.png",
     alt: "Cour intérieure de la résidence U Ritornu",
   },
   {
-    src: blueBedroomKitchen,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791763256/ChatGPT_Image_Oct_7_2026_01_43_02_PM.png",
     alt: "Chambre bleue et cuisine de la résidence U Ritornu",
   },
   {
-    src: greyBedroomBathroom,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_40_21_PM.png",
     alt: "Chambre et salle de bain de la résidence U Ritornu",
   },
   {
-    src: redBedroomKitchen,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_36_52_PM.png",
     alt: "Chambre rouge et cuisine de la résidence U Ritornu",
   },
   {
-    src: blueSuiteDining,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_30_20_PM.png",
     alt: "Suite bleue et espace repas de la résidence U Ritornu",
   },
   {
-    src: blueSuiteBalcony,
+    src: "https://res.cloudinary.com/r13aojto/image/upload/v1791764325/residence-courtyard.png",
     alt: "Suite bleue avec accès au balcon de la résidence U Ritornu",
   },
 ]
 
 const roomGallery = [
-  blueBedroomKitchen,
-  greyBedroomBathroom,
-  redBedroomKitchen,
-  blueSuiteDining,
-  blueSuiteBalcony,
+  "https://res.cloudinary.com/r13aojto/image/upload/v1791763256/ChatGPT_Image_Oct_7_2026_01_43_02_PM.png",
+  "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_40_21_PM.png",
+  "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_36_52_PM.png",
+  "https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_30_20_PM.png",
+  "https://res.cloudinary.com/r13aojto/image/upload/v1791764325/residence-courtyard.png",
 ]
 
 function Icon({ children, size = 20 }: { children: ReactNode, size?: number }) {
@@ -286,7 +286,7 @@ function RoomCarousel({
         decoding="async"
         key={roomGallery[current]}
         loading="lazy"
-        src={roomGallery[current]}
+        src="https://res.cloudinary.com/r13aojto/image/upload/v1791764295/ChatGPT_Image_Sep_26__2026__10_23_12_PM.png"
       />
       <div className="room-carousel-nav">
         <button
@@ -418,7 +418,7 @@ export default function App({ page = "home" }: { page?: SitePage }) {
               alt="U Ritornu, Sénégal et Corse"
               decoding="async"
               fetchPriority="high"
-              src={uritorneArtwork}
+              src="https://res.cloudinary.com/r13aojto/image/upload/v1791764318/uritorne-transparent.png"
             />
           </div>
           <div className="hero-actions">
@@ -605,7 +605,7 @@ export default function App({ page = "home" }: { page?: SitePage }) {
                 alt={item.title}
                 decoding="async"
                 loading="lazy"
-                src={item.image}
+                src="https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_30_20_PM.png"
               />
               <div>
                 <p>
