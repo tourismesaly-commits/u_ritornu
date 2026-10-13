@@ -279,7 +279,7 @@ function RoomCarousel({
         decoding="async"
         key={roomGallery[current]}
         loading="lazy"
-        src="{roomGallery[0]}"
+        src={roomGallery.map((src, index) => index === current ? src : undefined).filter(Boolean)[0] ?? ""}
       />
       <div className="room-carousel-nav">
         <button
@@ -598,7 +598,7 @@ export default function App({ page = "home" }: { page?: SitePage }) {
                 alt={item.title}
                 decoding="async"
                 loading="lazy"
-                src="https://res.cloudinary.com/r13aojto/image/upload/v1791763382/ChatGPT_Image_Oct_7_2026_01_30_20_PM.png"
+                src={item.image}
               />
               <div>
                 <p>
